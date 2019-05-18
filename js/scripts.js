@@ -234,29 +234,27 @@ $(document).ready(function () {
 });
 
 //test//
-var i = 0;
 
-function increment() {
-  i += 1;
-}
 
-function addfieldFunction() {
-  var r = document.createElement('div');
-  var y = document.createElement("INPUT");
-  var z = document.createElement("INPUT");
-  y.setAttribute("class", "dash-input");
-  y.setAttribute("type", "text");
-  y.setAttribute("placeholder", "University");
-  z.setAttribute("class", "dash-input");
-  z.setAttribute("type", "text");
-  z.setAttribute("placeholder", "Course");
-  increment();
-  y.setAttribute("name", "a_level[ " + i + " ][0]"); //Keep attribute in lower case
-  r.appendChild(y);
-  z.setAttribute("name", "a_level[ " + i + "][1]");
-  r.appendChild(z);
-  document.getElementById("form-div").appendChild(r);
-}
+$(function() {
+    var scntDiv = $('#p_scents');
+    var i = $('#p_scents p').size() + 1;
+    
+    $('#addScnt').live('click', function() {
+            $('<p><label for="p_scnts"><input type="text" id="p_scnt" size="20" name="p_scnt_' + i +'" value="" placeholder="Input Value" /></label> <a href="#" id="remScnt">Remove</a></p>').appendTo(scntDiv);
+            i++;
+            return false;
+    });
+    
+    $('#remScnt').live('click', function() { 
+            if( i > 2 ) {
+                    $(this).parents('p').remove();
+                    i--;
+            }
+            return false;
+    });
+});
+
 
 //test//
 
