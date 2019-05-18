@@ -234,7 +234,29 @@ $(document).ready(function () {
 });
 
 //test//
+var i = 0;
 
+function increment() {
+  i += 1;
+}
+
+function addfieldFunction() {
+  var r = document.createElement('div');
+  var y = document.createElement("INPUT");
+  var z = document.createElement("INPUT");
+  y.setAttribute("class", "dash-input");
+  y.setAttribute("type", "text");
+  y.setAttribute("placeholder", "University");
+  z.setAttribute("class", "dash-input");
+  z.setAttribute("type", "text");
+  z.setAttribute("placeholder", "Course");
+  increment();
+  y.setAttribute("name", "a_level[ " + i + " ][0]"); //Keep attribute in lower case
+  r.appendChild(y);
+  z.setAttribute("name", "a_level[ " + i + "][1]");
+  r.appendChild(z);
+  document.getElementById("form-div").appendChild(r);
+}
 
 //test//
 
