@@ -236,30 +236,6 @@ $(document).ready(function () {
 //test//
 
 
-    add-user();
-    
-
-function add-user() {
-    $(document).ready(function () {
-        var maxField = 10; //Input fields increment limitation
-        var addButton = $('.add_button'); //Add button selector
-        var wrapper = $('.field_wrapper'); //Input field wrapper
-        var fieldHTML = '<div><input type="text" name="field_name[]" value=""/><a href="javascript:void(0);" class="remove_button" title="Remove field"><img src="remove-icon.png"/></a></div>'; //New input field html 
-        var x = 1; //Initial field counter is 1
-        $(addButton).click(function () {
-            if (x < maxField) { //Check maximum number of input fields
-                x++; //Increment field counter
-                $(wrapper).append(fieldHTML); // Add field html
-            }
-        });
-        $(wrapper).on('click', '.remove_button', function (e) {
-            e.preventDefault();
-            $(this).parent('div').remove(); //Remove field html
-            x--;
-        });
-    });
-}
-
 //test//
 
 
