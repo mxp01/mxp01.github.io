@@ -311,10 +311,9 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Additional Guests"
-                                                                  required>
+                                <i class="fa fa-users"></i><input type="text" id="member" name="member" value="">Number of members: (max. 10)<br />
+<a href="#" id="filldetails" onclick="addFields()">Fill Details</a>
+    <div id="container"/>
                             </div>
                         </div>
                         
@@ -324,15 +323,13 @@
                                                                 class="" min="0"
                                                                 placeholder="Invite code"
                                                                 required>
+                                                                
                             </div>
                         </div>
 
 
 <!--NEW STUFF-->
-<button type="button" class="add">Add</button>
-<button type="button" class="remove">remove</button>
-<div id="new_chq"></div>
-<input type="hidden" value="1" id="total_chq">
+
 
 <!--NEW STUFF-->
 
