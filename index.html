@@ -283,37 +283,37 @@
     <div class="container">
        <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <h3>RSVP</h3>
+                <h3 id=RSVP>RSVP</h3>
                 <p>We would greatly appreciate if you could RSVP before 15 August 2019</p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
                     <div class="row">
+                        
                         <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email"
-                                                                     required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
-                                                                 required>
+                            <div id="rsvp" class="form-input-group">
+                                <i class="fa fa-user"></i><input type="number" name="name" class="" id="guests"
+                                                                 placeholder="Number of Guests"
+                                                                 required> 
+                                                                 
+                                                                 
+                                                                 <div class="col-md-6 col-sm-6">
+
+                                                                    <a href="#RSVP" id="filldetails" onclick="addFields()">Fill Details</a>
+                                                                   
                             </div>
                         </div>
                     </div>
 
-             
+                    <div class="col-md-6 col-sm-6">
+                        <div id="rsvp-name" class="form-input-group">
+                            <i class="fa fa-user"></i><input type="text" name="name" class="" id="guests-name"
+                                                             placeholder="Name"
+                                                             required> 
                     
 
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" id="member" name="extras" class="" min="0" max="4" placeholder="Extras" required>
-                            </div>
-                        </div>
+                     
                         
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
@@ -327,6 +327,7 @@
 
 
 <!--NEW STUFF-->
+
 
 
 <!--NEW STUFF-->
@@ -359,6 +360,24 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script type='text/javascript'>
+
+    function addFields(){
+                var number = document.getElementById("guests").value;
+                var container = document.getElementById("rsvp-name");
+                while (container.hasChildNodes()) {
+                    container.removeChild(container.lastChild);
+                }
+                for (i=0;i<number;i++){
+                    container.appendChild(document.createTextNode("Guest " + (i+1)));
+                    var input = document.createElement("input");
+                    input.type = "text";
+                    container.appendChild(input);
+                    container.appendChild(document.createElement("br"));
+                }
+            }
+    
+    </script>
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/jquery.flexslider-min.js"></script>
