@@ -170,6 +170,8 @@
                     </button>
                     <h3 class="text-center section-padding">Ugh... dress codes?</h3>
                     <h5 class="text-center section-padding">Strictly Formal </h5>
+                    <div style="display: flex; justify-content: center;"></div>
+                    <img src="img/formal.jpg" alt="formal"></div>
                     
                 </div>
             </div><!-- /.modal-content -->
@@ -296,22 +298,29 @@
                                                                      required>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                               <button class="btn-fill rsvp-btn" type="button" onclick="addFields()">Add</button>
-                            </div>
-                        </div>
+                        
 
                         
                         <div class="col-md-6 col-sm-6" id="container2">
                             <div class="form-input-group">
-                                <i class="fa fa-user"></i><input type="number" min="0" max="4" name="name" class="" id="additional-guests"
-                                                                 placeholder="Additional Guests"
-                                                                 required>
+                                <i class="fa fa-user"></i><select id="additional-guests">
+                                        <option value="0" selected="selected"># of Additional Guests</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="3">4</option>
+                                    </select>
+                                                                 
                             </div>
                         </div>
+                        <div class="row"></div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-input-group">
+                           <button class="btn-fill rsvp-btn" type="button" onclick="addFields()">Add Guests</button>
+                        </div>
                     </div>
-                    <div class="row">
+                   
+
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
@@ -320,38 +329,20 @@
                                                                 required>
                             </div>
                         </div>
-
+                   
                        
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group"><i class="fa fa-reply"></i>
-                                <input list="response" name="response" placeholder="Accepts with pleasure" required></label>
-<datalist id="response">
-  <option value="Accepts with pleasure">
-  <option value="Decline with regret">
-</datalist>
+                                <select id="response">
+                                        <option value="0" selected="selected">Accept with pleasure</option>
+                                        <option value="1">Decline with regret</option>
+                                    </select>
                             </div>
                         </div>
 
-                        
-
-
-                    </div>
-
-
+        
 
                     
-<!--Test Stuff-->
-
-
-
-
-
-
-
-
-<!--Test Stuff-->
-
-                    <div class="row">
                         <div class="col-md-6 col-sm-6" id="alert-wrapper"></div>
                     </div>
                     <button class="btn-fill rsvp-btn">
@@ -389,11 +380,11 @@
         }
         for (i=0;i<number;i++){
             // Append a node with a random text
-            container.appendChild(document.createTextNode("Guest " + (i+1)));
+            container.appendChild(document.createTextNode("Guest " + (i+2)));
             // Create an <input> element, set its type and name attributes
             var input = document.createElement("input");
             input.type = "text";
-            input.name = "guest" + i;
+            input.name = "guest" + (i+2);
             container.appendChild(input);
             // Append a line break 
             container.appendChild(document.createElement("br"));
