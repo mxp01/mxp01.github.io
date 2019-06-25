@@ -294,26 +294,48 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-user"></i><input type="text" name="name" class=""
-                                                                     placeholder="Your name"
+                                                                     placeholder="Name"
                                                                      required>
                             </div>
                         </div>
                         
 
                         
-                        <div class="col-md-6 col-sm-6" id="container2">
+                        <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-user"></i><input type="number" min="0" max="4" name="name" class="" id="additional-guests"
-                                                                 placeholder="Additional Guests"
-                                                                 required>
+                                <i class="fa fa-user"></i><input type="text" name="name" class=""
+                                                                     placeholder="Name"
+                                                                     required>
                             </div>
                         </div>
-                        <div class="row"></div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-input-group">
-                           <button class="btn-fill rsvp-btn" type="button" onclick="addFields()">Add Guests</button>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input type="text" name="name" class=""
+                                                                     placeholder="Name"
+                                                                     required>
+                            </div>
                         </div>
-                    </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input type="text" name="name" class=""
+                                                                     placeholder="Name"
+                                                                     required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input type="text" name="name" class=""
+                                                                     placeholder="Name"
+                                                                     required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input type="text" name="name" class=""
+                                                                     placeholder="Name"
+                                                                     required>
+                            </div>
+                        </div>
                    
 
                         <div class="col-md-6 col-sm-6">
@@ -328,7 +350,7 @@
                        
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group"><i class="fa fa-reply"></i>
-                                <input list="response" name="response" placeholder="Accepts with pleasure" required></label>
+                                <input list="response" name="response" placeholder="Accept / Decline" required></label>
 <datalist id="response">
   <option value="Accepts with pleasure">
   <option value="Decline with regret">
@@ -364,29 +386,7 @@
 
 
 
-<script type='text/javascript'>
-    function addFields(){
-        // Number of inputs to create
-        var number = document.getElementById("additional-guests").value;
-        // Container <div> where dynamic content will be placed
-        var container = document.getElementById("container2");
-        // Clear previous contents of the container
-        while (container.hasChildNodes()) {
-            container.removeChild(container.lastChild);
-        }
-        for (i=0;i<number;i++){
-            // Append a node with a random text
-            container.appendChild(document.createTextNode("Guest " + (i+2)));
-            // Create an <input> element, set its type and name attributes
-            var input = document.createElement("input");
-            input.type = "text";
-            input.name = "guest" + (i+2);
-            container.appendChild(input);
-            // Append a line break 
-            container.appendChild(document.createElement("br"));
-        }
-    }
-</script>
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
