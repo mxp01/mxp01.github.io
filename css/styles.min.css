@@ -314,10 +314,11 @@ section .header{
 .hero{
 	min-height:750px;
 	background:url("../img/hero-min.jpg") center center;
-	-webkit-background-size:cover;
-	-moz-background-size:cover;
-	-o-background-size:cover;
-	background-size:cover;
+	background-repeat: no-repeat;
+	-webkit-background-size:contain;
+	-moz-background-size:contain;
+	-o-background-size:contain;
+	background-size:contain;
 	position:relative
 }
 .hero .down-arrow a{
